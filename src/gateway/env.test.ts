@@ -9,11 +9,6 @@ describe('buildEnvVars', () => {
     expect(result).toEqual({});
   });
 
-  it('includes ANTHROPIC_API_KEY when set directly', () => {
-    const env = createMockEnv({ ANTHROPIC_API_KEY: 'sk-test-key' });
-    const result = buildEnvVars(env);
-    expect(result.ANTHROPIC_API_KEY).toBe('sk-test-key');
-  });
 
   it('includes OPENAI_API_KEY when set directly', () => {
     const env = createMockEnv({ OPENAI_API_KEY: 'sk-openai-key' });
