@@ -340,7 +340,6 @@ debug.get('/ws-test', async (c) => {
 // GET /debug/env - Show environment configuration (sanitized)
 debug.get('/env', async (c) => {
   return c.json({
-    has_anthropic_key: !!c.env.ANTHROPIC_API_KEY,
     has_openai_key: !!c.env.OPENAI_API_KEY,
     has_gateway_token: !!c.env.MOLTBOT_GATEWAY_TOKEN,
     has_r2_access_key: !!c.env.R2_ACCESS_KEY_ID,
